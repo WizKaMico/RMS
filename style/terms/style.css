@@ -1,0 +1,107 @@
+.wrap {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    box-sizing: border-box;
+    height: 100vh;
+    padding: 2rem;
+    background-color: #eee;
+  }
+  
+  .container {
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    padding: 1rem;
+    background-color: #fff;
+    width: 768px;
+    height: 100%;
+    border-radius: 0.25rem;
+    box-shadow: 0rem 1rem 2rem -0.25rem rgba(0, 0, 0, 0.25);
+  }
+  .container__heading {
+    padding: 1rem 0;
+    border-bottom: 1px solid #ccc;
+    text-align: center;
+  }
+  .container__heading > h2 {
+    font-size: 1.75rem;
+    line-height: 1.75rem;
+    margin: 0;
+  }
+  .container__content {
+    flex-grow: 1;
+    overflow-y: scroll;
+  }
+  .container__nav {
+    border-top: 1px solid #ccc;
+    text-align: right;
+    padding: 2rem 0 1rem;
+  }
+   .button {
+    background-color: #008ecf;
+    box-shadow: 0rem 0.5rem 1rem -0.125rem rgba(0, 0, 0, 0.25);
+    padding: 0.8rem 2rem;
+    border-radius: 0.5rem;
+    color: #fff;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: transform 0.25s, box-shadow 0.25s;
+  }
+   .button:hover {
+    box-shadow: 0rem 0rem 1rem -0.125rem rgba(0, 0, 0, 0.25);
+    transform: translateY(-0.5rem);
+  }
+  .container__nav > small {
+    color: #777;
+    margin-right: 1rem;
+  }
+
+  body {
+    background:radial-gradient(ellipse at center, rgba(255,254,234,1) 0%, rgba(255,254,234,1) 35%, #B7E8EB 100%);
+    overflow: hidden;
+}
+
+
+  .ocean {
+    height: 5%;
+    width:100%;
+    position:absolute;
+    bottom:0;
+    left:0;
+    background: #015871;
+}
+
+.wave {
+    background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/85486/wave.svg) repeat-x;
+    position: absolute;
+    top: -198px;
+    width: 6400px;
+    height: 198px;
+    animation: wave 5s cubic-bezier( 0.36, 0.45, 0.63, 0.53) infinite;
+    transform: translate3d(0, 0, 0);
+}
+
+.wave:nth-of-type(2) {
+    top: -175px;
+    animation: wave 7s cubic-bezier( 0.36, 0.45, 0.63, 0.53) -.125s infinite, swell 7s ease -1.25s infinite;
+    opacity: 1;
+}
+
+@keyframes wave {
+    0% {
+        margin-left: 0;
+    }
+    100% {
+        margin-left: -1600px;
+    }
+}
+
+@keyframes swell {
+    0%, 100% {
+        transform: translate3d(0,-25px,0);
+    }
+    50% {
+        transform: translate3d(0,5px,0);
+    }
+}
